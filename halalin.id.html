@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="only light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>halallegalpartner.id | Pendamping sertifikasi halal</title>
+<meta name="description" content="Pendampingan sertifikasi halal dari UMKM sampai industri: SEHATI, reguler, SJPH, dan proses di SIHALAL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FCFAF6; --surface:#F4EFE3; --ink:#14231C; --muted:#5B6A61; --line:#E6E0D1;
+  --green:#105233; --green-d:#0B3D26; --on-green:#FCFAF6; --accent:#105233; --gold:#b8872c; --gold-d:#8a6226; --gold-l:#e5c179; --brand:#105233; --err:#B3261E;
+  --ease:cubic-bezier(.22,.8,.24,1);
+  --serif:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --sans:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --gut:clamp(20px,5vw,56px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:only light;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--paper)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;transition:background .4s}
+body.menu-open{overflow:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.06;letter-spacing:-.04em;font-weight:700}
+h2{font-size:clamp(1.8rem,3.3vw,2.8rem);line-height:1.15;letter-spacing:-.035em}
+h3{font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.2;font-weight:500}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:min(1200px,100% - 2*var(--gut));margin-inline:auto}
+.sec{padding-block:clamp(64px,9vw,128px)}
+.sec-tight{padding-block:clamp(40px,6vw,72px)}
+.lead{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--muted);max-width:58ch;line-height:1.6}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--green);color:var(--on-green);padding:.6rem 1rem;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+.ph{background:color-mix(in srgb,var(--gold-l) 35%,transparent);border-bottom:1px dashed var(--gold-d);border-radius:2px;padding:0 .15em}
+
+/* buttons & links */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.5rem;border-radius:999px;font:500 1rem/1.2 var(--sans);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .35s var(--ease)}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--green);color:var(--on-green)}
+.btn-primary:hover{background:var(--green-d);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--surface);border-color:var(--muted);transform:translateY(-2px)}
+.btn-light{background:var(--gold-l);color:var(--green-d)}
+.btn-light:hover{transform:translateY(-2px);background:#F0D599}
+.btn svg{width:18px;height:18px;flex:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.ulink{text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 30%,transparent);text-underline-offset:.3em;text-decoration-thickness:1px;transition:text-decoration-color .3s}
+.ulink:hover{text-decoration-color:currentColor}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--paper) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .35s,background .35s}
+.hdr.scrolled,body.menu-open .hdr{border-bottom-color:var(--line)}
+body.menu-open .hdr{background:var(--paper)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-size:1.6rem;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--brand)}
+.brand svg{height:36px;width:auto;flex:none;transition:transform .6s var(--ease)}
+.brand:hover svg{transform:translateY(-2px)}
+.hl .h{fill:var(--hc,var(--green))}.hl .l{fill:var(--lc,var(--gold))}.hl .d{stroke:var(--lc,var(--gold))}
+.brand span{color:var(--gold-d);font-weight:700}
+.nav{display:none;gap:4px}
+.nav a{position:relative;padding:.5rem .8rem;text-decoration:none;font-size:.98rem;color:var(--muted);transition:color .3s}
+.nav a::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:2px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--ink)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.hdr-cta{display:none;padding:.6rem 1.15rem;font-size:.95rem}
+.burger{width:44px;height:44px;border:0;background:transparent;cursor:pointer;position:relative;color:var(--ink)}
+.burger i{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease)}
+.burger i:nth-child(1){top:18px}.burger i:nth-child(2){top:25px}
+body.menu-open .burger i:nth-child(1){top:21.5px;transform:rotate(45deg)}
+body.menu-open .burger i:nth-child(2){top:21.5px;transform:rotate(-45deg)}
+@media(min-width:960px){.nav{display:flex}.hdr-cta{display:inline-flex}.burger{display:none}}
+
+.menu{position:fixed;inset:0;z-index:50;background:var(--paper);padding:calc(92px + env(safe-area-inset-top,0px)) var(--gut) calc(32px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;justify-content:space-between;visibility:hidden;opacity:0;transform:translateY(-12px);transition:opacity .4s,transform .5s var(--ease),visibility 0s .5s;overflow-y:auto}
+body.menu-open .menu{visibility:visible;opacity:1;transform:none;transition:opacity .4s,transform .5s var(--ease),visibility 0s}
+.menu nav{display:flex;flex-direction:column}
+.menu nav a{font-family:var(--serif);font-weight:600;letter-spacing:-.035em;font-size:2rem;line-height:1.1;padding:.6rem 0;border-bottom:1px solid var(--line);text-decoration:none;opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease),padding .3s}
+.menu nav a:hover{padding-left:10px}
+body.menu-open .menu nav a{opacity:1;transform:none;transition-delay:calc(var(--n)*.05s + .1s)}
+@media(min-width:960px){.menu{display:none}}
+
+/* view transitions */
+#view{transition:opacity .22s,transform .22s var(--ease)}
+#view.swap{opacity:0;transform:translateY(8px)}
+#view.enter>*{animation:enter .7s var(--ease) both}
+@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#curtain{position:fixed;inset:0;z-index:90;background:var(--green);transform:translateY(100%);pointer-events:none;transition:transform .55s var(--ease);display:grid;place-items:center;color:var(--gold-l)}
+#curtain svg{--hc:var(--on-green);--lc:var(--gold-l);height:84px;width:auto;opacity:0;transform:rotate(-45deg) scale(.8);transition:opacity .4s .15s,transform .7s var(--ease)}
+#curtain.cover{transform:translateY(0);pointer-events:all}
+#curtain.cover svg{opacity:1;transform:none}
+#curtain.leave{transform:translateY(-100%)}
+#curtain.reset{transition:none;transform:translateY(100%)}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* hero */
+.hero{padding-block:clamp(36px,7vw,88px) clamp(48px,8vw,104px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,96px);align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:.4rem .9rem .4rem .6rem;border:1px solid var(--line);border-radius:999px;font-size:.9rem;color:var(--muted);margin-bottom:28px}
+.badge svg{width:18px;height:18px;color:var(--gold)}
+.hero h1{max-width:14ch;margin-bottom:28px}
+.hero .lead{margin-bottom:36px}
+.st>*{opacity:0;transform:translateY(18px);animation:rise .9s var(--ease) forwards;animation-delay:calc(var(--k)*.12s + .1s)}
+@keyframes rise{to{opacity:1;transform:none}}
+.motif{width:100%;max-width:460px;justify-self:end;color:var(--gold)}
+.motif svg{width:100%;height:auto;display:block;overflow:visible}
+.motif g{fill:none;stroke:currentColor;stroke-width:1.3;stroke-linejoin:round}
+.motif .draw>*{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s var(--ease) forwards;animation-delay:calc(var(--i)*.14s + .3s)}
+.motif .fillin{fill:currentColor;stroke:none;opacity:0;animation:fillin 1.6s 2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fillin{to{opacity:.12}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.motif{justify-self:start;max-width:320px}}
+
+/* proof */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}
+.proof>div{padding:28px 24px;border-left:1px solid var(--line)}
+.proof>div:first-child{border-left:0;padding-left:0}
+.proof b{display:block;font:700 clamp(2rem,3.4vw,2.8rem)/1.05 var(--serif);letter-spacing:-.04em;color:var(--brand);margin-bottom:6px}
+.proof span{color:var(--muted);font-size:.95rem;line-height:1.4;display:block;max-width:22ch}
+@media(max-width:760px){.proof{grid-template-columns:1fr 1fr}.proof>div{border-left:0;padding:22px 0;border-top:1px solid var(--line)}.proof>div:nth-child(-n+2){border-top:0}.proof>div:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}}
+
+/* section head */
+.shead{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(32px,5vw,56px);max-width:720px}
+
+/* services (home) */
+.svc{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:16px}
+.panel{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:14px;text-decoration:none;transition:border-color .35s,background .35s,transform .45s var(--ease)}
+.panel:hover{background:var(--surface);border-color:var(--muted);transform:translateY(-3px)}
+.panel p{color:var(--muted)}
+.panel .more{margin-top:auto;padding-top:12px;font-weight:500}
+.panel-green{background:var(--green);border-color:var(--green);color:var(--on-green);grid-row:span 2;min-height:420px}
+.panel-green:hover{background:var(--green-d);border-color:var(--green-d)}
+.panel-green p{color:color-mix(in srgb,var(--on-green) 82%,transparent);max-width:38ch}
+.panel-green h3{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;letter-spacing:-.035em}
+.panel-green>*{position:relative;z-index:1}
+.pat{position:absolute;inset:0;width:100%;height:100%;color:var(--gold-l);opacity:.22;pointer-events:none;-webkit-mask-image:linear-gradient(200deg,#000 0%,transparent 62%);mask-image:linear-gradient(200deg,#000 0%,transparent 62%);z-index:0!important;transition:opacity .6s,transform 1.2s var(--ease)}
+.panel-green:hover .pat{opacity:.34;transform:scale(1.04)}
+@media(max-width:860px){.svc{grid-template-columns:1fr}.panel-green{grid-row:auto;min-height:320px}}
+
+/* why */
+.why{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px)}
+.why-head{position:sticky;top:110px;align-self:start}
+.why li{padding:28px 0;border-top:1px solid var(--line);display:grid;gap:8px;transition:padding .4s var(--ease)}
+.why li:last-child{border-bottom:1px solid var(--line)}
+.why li:hover{padding-left:12px}
+.why li p{color:var(--muted);max-width:52ch}
+@media(max-width:860px){.why{grid-template-columns:1fr}.why-head{position:static}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.steps li{position:relative;padding-top:64px}
+.steps li::before{content:"";position:absolute;top:22px;left:54px;right:-24px;height:1px;background:var(--line)}
+.steps li:last-child::before{display:none}
+.steps .n{position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);color:var(--brand);display:grid;place-items:center;font:600 1.05rem var(--serif);transition:background .4s,color .4s,border-color .4s}
+.steps li:hover .n{background:var(--green);color:var(--gold-l);border-color:var(--green)}
+.steps h3{margin-bottom:8px}
+.steps p{color:var(--muted);font-size:.98rem}
+@media(max-width:860px){.steps{grid-template-columns:1fr;gap:0}.steps li{padding:0 0 32px 64px;min-height:76px}.steps li::before{top:48px;left:22px;right:auto;width:1px;height:calc(100% - 48px)}}
+
+/* sector rows */
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr) 40px;align-items:center;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .45s var(--ease),background .35s}
+.row h3{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:600;transition:color .3s}
+.row p{color:var(--muted);font-size:.98rem}
+.row i{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);position:relative;transition:background .4s,border-color .4s,transform .5s var(--ease)}
+.row i::before,.row i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:background .3s}
+.row i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.row:hover{padding-left:16px;background:var(--surface)}
+.row:hover i{background:var(--green);border-color:var(--green);transform:rotate(90deg)}
+.row:hover i::before,.row:hover i::after{background:var(--gold-l)}
+@media(max-width:700px){.row{grid-template-columns:1fr 40px}.row p{grid-column:1;grid-row:2}.row i{grid-row:1/3;grid-column:2}}
+
+/* testimonials */
+.tt{display:grid;grid-template-columns:minmax(0,.35fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.tt-tabs{display:flex;flex-direction:column;gap:4px}
+.tt-tabs button{font:500 1rem var(--sans);text-align:left;background:transparent;border:0;border-left:2px solid var(--line);padding:.7rem 1rem;color:var(--muted);cursor:pointer;transition:color .3s,border-color .3s,padding .4s var(--ease)}
+.tt-tabs button:hover{color:var(--ink)}
+.tt-tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--green);padding-left:1.4rem}
+.tt-stage{display:grid}
+.tt-stage>*{grid-area:1/1;margin:0;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .5s,transform .6s var(--ease),visibility 0s .5s}
+.tt-stage>*.on{opacity:1;visibility:visible;transform:none;transition:opacity .6s .1s,transform .7s .1s var(--ease),visibility 0s}
+.tt-stage blockquote{margin:0 0 24px;font:500 clamp(1.5rem,2.7vw,2.2rem)/1.3 var(--serif);letter-spacing:-.03em}
+.tt-stage figcaption{color:var(--muted);font-size:.98rem}
+.tt-empty{min-height:190px;border-left:2px solid var(--gold);padding:8px 0 8px clamp(20px,3vw,40px);display:flex;flex-direction:column;justify-content:center;gap:10px}
+.tt-empty strong{font:600 clamp(1.35rem,2vw,1.7rem)/1.25 var(--serif);letter-spacing:-.025em}
+.tt-empty p{color:var(--muted);max-width:42ch}
+@media(max-width:760px){.tt{grid-template-columns:1fr}.tt-tabs{flex-direction:row;overflow-x:auto}.tt-tabs button{border-left:0;border-bottom:2px solid var(--line);white-space:nowrap}.tt-tabs button[aria-selected="true"]{border-color:var(--green);padding-left:1rem}}
+
+/* documentation gallery */
+.doc-marquee{display:grid;gap:16px;overflow:hidden}
+.doc-row{overflow:hidden}
+.doc-track{display:flex;width:max-content;will-change:transform}
+.doc-group{display:flex;flex:none;gap:16px;padding-right:16px}
+.doc-row.right .doc-track{animation:doc-right 42s linear infinite}
+.doc-row.left .doc-track{animation:doc-left 46s linear infinite}
+.doc-row:hover .doc-track,.doc-row:focus-within .doc-track{animation-play-state:paused}
+@keyframes doc-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes doc-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.doc-card{position:relative;display:block;flex:0 0 clamp(250px,31vw,390px);width:clamp(250px,31vw,390px);padding:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);text-align:left;cursor:zoom-in;transition:transform .4s var(--ease),border-color .3s}
+.doc-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.doc-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .65s var(--ease)}
+.doc-card:hover img{transform:scale(1.025)}
+.photo-viewer{width:min(92vw,1100px);max-width:none;max-height:92dvh;padding:12px;border:1px solid color-mix(in srgb,var(--gold) 42%,var(--line));border-radius:18px;background:var(--paper);color:var(--ink)}
+.photo-viewer::backdrop{background:rgba(12,22,17,.82);backdrop-filter:blur(4px)}
+.photo-viewer img{display:block;max-width:100%;max-height:calc(92dvh - 72px);margin:auto;object-fit:contain;border-radius:10px}
+.photo-viewer form{display:flex;justify-content:flex-end;margin-bottom:8px}
+.photo-viewer button{border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);padding:.45rem .9rem;font:500 .9rem var(--sans);cursor:pointer}
+.photo-viewer p{padding:10px 4px 2px;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.doc-marquee{gap:10px}.doc-group{gap:10px;padding-right:10px}.doc-card{flex-basis:76vw;width:76vw;border-radius:14px}}
+@media(prefers-reduced-motion:reduce){.doc-row{overflow-x:auto;scrollbar-width:none}.doc-row::-webkit-scrollbar{display:none}.doc-track{animation:none!important}.doc-group[aria-hidden="true"]{display:none}}
+
+/* CTA block */
+.cta{position:relative;overflow:hidden;background:var(--green);color:var(--on-green);border-radius:28px;padding:clamp(36px,6vw,88px);display:grid;gap:28px;justify-items:start}
+.cta>*{position:relative;z-index:1}
+.cta h2{max-width:16ch}
+.cta p{color:color-mix(in srgb,var(--on-green) 82%,transparent);max-width:46ch}
+.cta .pat{color:var(--gold-l);-webkit-mask-image:linear-gradient(270deg,#000 0%,transparent 65%);mask-image:linear-gradient(270deg,#000 0%,transparent 65%);opacity:.2}
+
+/* footer */
+.ftr{border-top:1px solid var(--line);margin-top:clamp(40px,6vw,80px);padding-block:clamp(40px,6vw,72px) 32px}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:32px}
+.ftr h4{font:600 .95rem var(--sans);margin:0 0 14px}
+.ftr li{margin-bottom:8px;color:var(--muted)}
+.ftr li a{transition:color .3s}
+.ftr li a:hover{color:var(--ink)}
+.ftr .tag{font:600 1.2rem/1.35 var(--serif);letter-spacing:-.02em;max-width:24ch;margin-top:14px}
+.disc{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;max-width:90ch}
+.disc p+p{margin-top:8px}
+@media(max-width:860px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.ftr-grid{grid-template-columns:1fr}}
+
+/* WA float */
+.wa{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--on-green);padding:.85rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.96rem;box-shadow:0 8px 28px -10px rgba(0,0,0,.45);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .5s,transform .6s var(--ease),background .3s}
+.wa.show{opacity:1;transform:none;pointer-events:auto}
+.wa:hover{background:var(--green-d);transform:translateY(-3px)}
+.wa svg{width:20px;height:20px;flex:none}
+@media(max-width:560px){.wa span{display:none}.wa{padding:.95rem}}
+
+/* inner pages */
+.phead{padding-block:clamp(40px,7vw,96px) clamp(28px,4vw,48px);display:grid;gap:22px}
+.phead h1{font-size:clamp(2.2rem,5vw,4.2rem);max-width:18ch}
+.tabs{display:inline-flex;gap:4px;padding:4px;background:var(--surface);border-radius:999px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{padding:.6rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.96rem;white-space:nowrap;color:var(--muted);transition:background .35s,color .35s}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current="page"]{background:var(--green);color:var(--on-green)}
+.detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);margin-top:clamp(32px,5vw,56px)}
+.detail h2{font-size:clamp(1.7rem,3vw,2.5rem);margin-bottom:20px;max-width:16ch}
+.detail .intro{color:var(--muted);max-width:52ch}
+.bl h3{font-family:var(--sans);font-size:1rem;font-weight:600;letter-spacing:0;margin:0 0 6px}
+.bl+.bl{margin-top:36px}
+.bl li{position:relative;padding:.75rem 0 .75rem 2rem;border-top:1px solid var(--line);transition:padding .35s var(--ease)}
+.bl li:last-child{border-bottom:1px solid var(--line)}
+.bl li:hover{padding-left:2.4rem}
+.bl.ck li::before{content:"";position:absolute;left:3px;top:1.2rem;width:12px;height:6px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-48deg)}
+.bl.dash li::before{content:"";position:absolute;left:2px;top:1.6rem;width:12px;height:1.5px;background:var(--gold);transition:width .35s var(--ease)}
+.bl.dash li:hover::before{width:18px}
+.note{margin-top:32px;padding:22px 24px;background:var(--surface);border-radius:16px}
+.note b{display:block;margin-bottom:4px}
+.note p{color:var(--muted);font-size:.98rem}
+@media(max-width:860px){.detail{grid-template-columns:1fr}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,5vw,72px)}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.strip{margin-top:clamp(56px,8vw,96px);padding:clamp(24px,4vw,40px);border:1px solid var(--line);border-radius:22px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.strip h3{max-width:30ch}
+
+/* sector page */
+.sector{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(32px,6vw,88px);padding-block:clamp(32px,5vw,64px) 0}
+.side{position:sticky;top:100px;align-self:start;display:flex;flex-direction:column}
+.side a{padding:.65rem 0 .65rem 1rem;border-left:2px solid var(--line);text-decoration:none;color:var(--muted);transition:color .3s,border-color .3s,padding .4s var(--ease)}
+.side a:hover{color:var(--ink);padding-left:1.3rem}
+.side a[aria-current="page"]{color:var(--ink);border-color:var(--green);font-weight:500}
+.art h1{font-size:clamp(2rem,4.2vw,3.5rem);max-width:20ch;margin-bottom:24px}
+.art .lead{margin-bottom:40px}
+.art .bl{max-width:640px}
+@media(max-width:860px){.sector{grid-template-columns:1fr}.side{position:static;flex-direction:row;overflow-x:auto;gap:4px;scrollbar-width:none}.side::-webkit-scrollbar{display:none}.side a{border-left:0;border-bottom:2px solid var(--line);padding:.6rem 1rem;white-space:nowrap}.side a:hover{padding-left:1rem}.side a[aria-current="page"]{border-color:var(--green)}}
+
+/* filters & cards */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);padding:.5rem 1rem;border-radius:999px;font:500 .94rem var(--sans);cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.chip:hover{border-color:var(--muted);transform:translateY(-1px)}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--on-green)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.card{border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;min-height:260px;transition:opacity .28s,transform .35s var(--ease),border-color .3s,background .3s}
+.card.out{opacity:0;transform:scale(.96)}
+.card:hover{border-color:var(--muted);background:var(--surface)}
+.card .meta{display:flex;justify-content:space-between;gap:12px;font-size:.88rem;color:var(--muted)}
+.card h3{font-size:1.5rem;font-weight:600}
+.card p{color:var(--muted);font-size:.98rem}
+.card .cert{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+@media(max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.case{background:var(--surface);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:18px;transition:transform .45s var(--ease)}
+.case:hover{transform:translateY(-4px)}
+.case dl{margin:0;display:grid;gap:14px}
+.case dt{font-weight:600;font-size:.95rem;display:flex;gap:10px;align-items:center}
+.case dt i{font:600 .85rem var(--serif);width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-style:normal}
+.case dd{margin:4px 0 0;color:var(--muted);font-size:.98rem}
+@media(max-width:960px){.cases{grid-template-columns:1fr}}
+
+/* about */
+.profile{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.dl{margin:0}
+.dl>div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.dl>div:last-child{border-bottom:1px solid var(--line)}
+.dl dt{color:var(--muted);font-size:.95rem}
+.dl dd{margin:0}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.vals>div{border-top:2px solid var(--gold);padding-top:22px;transition:border-color .4s,transform .45s var(--ease)}
+.vals>div:hover{border-color:var(--green);transform:translateY(-4px)}
+.vals h3{font-size:1.8rem;font-weight:700;margin-bottom:10px}
+.vals p{color:var(--muted)}
+.close{font:600 clamp(1.7rem,3.5vw,2.9rem)/1.2 var(--serif);letter-spacing:-.035em;max-width:24ch;color:var(--brand)}
+@media(max-width:860px){.profile{grid-template-columns:1fr}.vals{grid-template-columns:1fr;gap:24px}.dl>div{grid-template-columns:120px 1fr}}
+
+/* faq */
+.faq{max-width:860px;border-top:1px solid var(--line)}
+.acc{border-bottom:1px solid var(--line)}
+.acc button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;cursor:pointer;font:600 clamp(1.1rem,1.7vw,1.4rem)/1.3 var(--serif);letter-spacing:-.02em;transition:padding .4s var(--ease)}
+.acc button:hover{padding-left:10px}
+.acc button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.acc .pm{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);position:relative;transition:background .4s,border-color .4s,transform .5s var(--ease)}
+.acc .pm::before,.acc .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .45s var(--ease),background .3s}
+.acc .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc.open .pm{background:var(--green);border-color:var(--green)}
+.acc.open .pm::before,.acc.open .pm::after{background:var(--gold-l)}
+.acc.open .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.acc-p{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.acc.open .acc-p{grid-template-rows:1fr}
+.acc-p>div{overflow:hidden}
+.acc-p p{padding:0 60px 26px 0;color:var(--muted);max-width:64ch;opacity:0;transform:translateY(-6px);transition:opacity .4s,transform .5s var(--ease)}
+.acc.open .acc-p p{opacity:1;transform:none;transition-delay:.12s}
+
+/* blog */
+.posts{border-top:1px solid var(--line);margin-top:32px}
+.post{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line);transition:padding .45s var(--ease),background .35s,opacity .28s,transform .35s var(--ease)}
+.post.out{opacity:0;transform:translateX(-8px)}
+.post:hover{padding-left:14px;background:var(--surface)}
+.post span{color:var(--muted);font-size:.92rem}
+.post h3{font-size:clamp(1.1rem,1.7vw,1.35rem);font-weight:600;max-width:40ch}
+.post em{font-style:normal;color:var(--muted);font-size:.88rem;border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem;white-space:nowrap}
+@media(max-width:700px){.post{grid-template-columns:1fr;gap:6px}}
+
+/* contact & form */
+.contact{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(32px,6vw,88px);align-items:start}
+.form{display:grid;gap:34px}
+.q{border:0;padding:0;margin:0;min-width:0}
+.q legend{padding:0;margin-bottom:12px;font-weight:600;display:flex;gap:12px;align-items:center}
+.q legend i{font:600 .85rem var(--serif);font-style:normal;width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;flex:none}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fields{grid-template-columns:1fr}}
+.fld{width:100%;font:400 1rem var(--sans);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:12px;padding:.85rem 1rem;transition:border-color .3s,box-shadow .3s,background .3s}
+.fld::placeholder{color:var(--muted);opacity:.7}
+.fld:hover{border-color:var(--muted)}
+.fld:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt label{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.55rem 1.05rem;font-size:.95rem;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease);pointer-events:none}
+.opt:hover label{border-color:var(--muted)}
+.opt input:checked+label{background:var(--green);color:var(--on-green);border-color:var(--green);transform:scale(1.03)}
+.opt input:focus-visible+label{outline:2px solid var(--accent);outline-offset:3px}
+.err{color:var(--err);font-size:.9rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .35s,opacity .35s,margin .35s}
+.q.bad .err{max-height:40px;opacity:1;margin-top:8px}
+.q.bad .fld{border-color:var(--err)}
+.done{display:none;padding:clamp(24px,4vw,44px);background:var(--surface);border-radius:22px}
+.done.on{display:grid;gap:18px;animation:enter .7s var(--ease) both}
+.done pre{margin:0;font:400 .92rem/1.6 var(--sans);white-space:pre-wrap;color:var(--muted);border-left:2px solid var(--line);padding-left:16px}
+.info{display:grid;gap:0;border-top:1px solid var(--line)}
+.info>div{padding:18px 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--muted);font-size:.92rem;margin-bottom:2px}
+.info dd{margin:0}
+.info-w{position:sticky;top:100px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}.info-w{position:static}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .rv,.st>*{opacity:1;transform:none}
+  .motif .draw>*{stroke-dashoffset:0}
+  .motif .fillin{opacity:.12}
+  #curtain{display:none}
+}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#/" aria-label="halallegalpartner.id, beranda"><span id="brandMark"></a>
+    <nav class="nav" id="nav" aria-label="Utama"></nav>
+    <a class="btn btn-primary hdr-cta" href="#/kontak">Cek Kelayakan</a>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+  </div>
+</header>
+<div class="menu" id="menu"><nav id="menuNav" aria-label="Menu seluler"></nav><div class="btns" id="menuBtns"></div></div>
+
+<main id="main" tabindex="-1" style="outline:0"><div id="view"></div></main>
+
+<footer class="ftr" id="ftr"></footer>
+<a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Tanya soal sertifikasi halal"></a>
+<div id="curtain" aria-hidden="true"></div>
+
+<script>
+/* ===== Isi data bisnis di sini ===== */
+const SITE = {
+  nama: 'Ilham Fadhillah',
+  bnsp: '',
+  repeat: '[xx%]',
+  wa: '6282115512356',                       // format 62xxxxxxxxxx
+  email: 'halallegalpartner@halallegalpartner.id',             // idealnya halo@halallegalpartner.id
+  alamat: 'Jl. Terusan Soreang Ciwidey KM. 27 Pasirjambu, Kabupaten Bandung, Provinsi Jawa Barat, Imdonesia 40972',
+  jam: 'Senin–Sabtu, 08.00–17.00 WIB',
+  respon: '[1x24 jam kerja]',
+  social: { Instagram:'', TikTok:'', YouTube:'', LinkedIn:'' }   // isi URL profil
+};
+/* =================================== */
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const WAMSG='Halo halallegalpartner.id, saya ingin konsultasi sertifikasi halal untuk usaha saya.';
+const wa=(m=WAMSG)=>`https://wa.me/${SITE.wa}?text=${encodeURIComponent(m)}`;
+const waShow=()=>SITE.wa?('+'+SITE.wa):'[No. WhatsApp]';
+const ICON_WA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-3.9A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2-1.8-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.8Z"/></svg>';
+const ICON_SEAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.4 1.9 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 21.5l-2.4-1.9-3 .2-.9-2.9L3.2 15.2l1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2L12 2.5z"/><path d="M8.5 12.2l2.5 2.5 4.5-5"/></svg>';
+
+/* ---- geometric motif (8-point star) ---- */
+function starPts(cx,cy,R,off=0){
+  const pt=(a)=>{const r=a*Math.PI/180;return (cx+R*Math.cos(r)).toFixed(1)+','+(cy+R*Math.sin(r)).toFixed(1)};
+  return [[0,1,2,3].map(k=>pt(off+45+90*k)).join(' '),[0,1,2,3].map(k=>pt(off+90*k)).join(' ')];
+}
+function motif(){
+  const c=200; let i=0; const out=[];
+  const add=(tag,attrs)=>out.push(`<${tag} ${attrs} pathLength="1" style="--i:${i++}"/>`);
+  add('circle',`cx="${c}" cy="${c}" r="192"`);
+  [[172,0],[122,22.5],[76,0]].forEach(([R,o])=>{starPts(c,c,R,o).forEach(p=>add('polygon',`points="${p}"`))});
+  add('circle',`cx="${c}" cy="${c}" r="46"`);
+  let lines='';
+  for(let k=0;k<8;k++){const a=(22.5+45*k)*Math.PI/180;lines+=`M${(c+46*Math.cos(a)).toFixed(1)} ${(c+46*Math.sin(a)).toFixed(1)}L${(c+192*Math.cos(a)).toFixed(1)} ${(c+192*Math.sin(a)).toFixed(1)}`}
+  out.push(`<path d="${lines}" style="--i:${i++}" opacity=".5"/>`);
+  const fill=starPts(c,c,76,0)[0];
+  return `<div class="motif" aria-hidden="true"><svg viewBox="0 0 400 400"><g class="draw">${out.join('')}</g><polygon class="fillin" points="${fill}"/></svg></div>`;
+}
+function pattern(){
+  const a=starPts(40,40,30,0).map(p=>`<polygon points="${p}" fill="none" stroke="currentColor" stroke-width="1"/>`).join('');
+  return `<svg class="pat" aria-hidden="true"><defs><pattern id="tile" width="80" height="80" patternUnits="userSpaceOnUse">${a}<circle cx="40" cy="40" r="9" fill="none" stroke="currentColor" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#tile)"/></svg>`;
+}
+function mark(){return `<svg class="hl" viewBox="866 -6 686 770" aria-hidden="true"><path class="d" d="M1033 190C1033 108 1140 76 1210 22C1280 76 1388 108 1388 190" fill="none" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/><rect class="h" x="873" y="207" width="128" height="548" rx="25"/><rect class="h" x="990" y="421" width="195" height="121"/><rect class="l" x="1180" y="207" width="133" height="548" rx="25"/><rect class="l" x="1180" y="646" width="364" height="109" rx="25"/></svg>`}
+
+/* ---- data ---- */
+const SECTORS=[
+ {slug:'rpu',name:'Rumah Potong Unggas',short:'RPU',desc:'Dari juru sembelih sampai rantai dingin',
+  title:'Sertifikasi halal RPU, dari juru sembelih sampai rantai dingin',
+  text:'Penyembelihan adalah titik paling kritis dalam produk hewani. Kami bantu RPU Anda memenuhi standar penyembelihan halal dan menyiapkan semua catatan yang akan diperiksa auditor.',
+  help:['Kesiapan juru sembelih halal bersertifikat','Alur penyembelihan dan pemisahan produk','Prosedur ketertelusuran','SJPH khusus RPU','Pendampingan audit'],
+  extra:['Nilai tambah','Kami juga memahami persyaratan pendukung RPU seperti NKV, sehingga persiapan bisa berjalan beriringan.']},
+ {slug:'sppg',name:'Dapur SPPG',short:'SPPG',desc:'Banyak pemasok, ribuan porsi setiap hari',
+  title:'Dapur SPPG yang siap diaudit halal',
+  text:'Dapur SPPG memasak ratusan sampai ribuan porsi setiap hari dengan banyak pemasok. Kami bantu menyusun daftar bahan, memilih pemasok bersertifikat halal, dan menata alur dapur agar konsisten.',
+  help:['Verifikasi pemasok dan bahan','SJPH untuk dapur skala besar','Pelatihan tim dapur','Pendampingan audit'],
+  extra:['Dokumen pendukung','Kami juga bisa membantu persiapan dokumen pendukung seperti SLHS.']},
+ {slug:'resto',name:'Resto & Katering',short:'Resto & Katering',desc:'Bumbu impor, saus, dan bahan olahan',
+  title:'Menu banyak, bahan banyak, tetap bisa bersertifikat halal',
+  text:'Resto dan katering sering terhambat oleh bumbu impor, saus, dan bahan olahan yang sumbernya tidak jelas. Kami bantu menelusuri setiap bahan dan mencari penggantinya bila perlu.',
+  help:['Inventarisasi menu dan bahan','Penelusuran status halal bahan','SOP dapur','Persiapan audit']},
+ {slug:'fashion',name:'Fashion & Tekstil',short:'Fashion',desc:'Kulit, lem, pewarna, dan bahan pelapis',
+  title:'Produk fashion juga bisa bersertifikat halal',
+  text:'Kulit, lem, pewarna, dan bahan pelapis bisa berasal dari sumber hewani. Kami bantu memetakan bahan baku produk fashion Anda dan menyiapkan dokumen pendukungnya.',
+  help:['Pemetaan bahan (kulit, benang, pewarna, perekat)','Dokumen pemasok','SJPH']},
+ {slug:'kimia',name:'Bahan Kimia & Industri',short:'Bahan Kimia',desc:'Asal bahan, proses, dan dokumen teknis',
+  title:'Pendampingan halal untuk bahan kimia dan bahan industri',
+  text:'Bahan kimia dan bahan tambahan sering menjadi bahan baku industri lain yang membutuhkan status halal. Kami bantu menelusuri asal bahan, proses produksi, dan dokumen teknisnya.',
+  help:['Analisis bahan dan proses','Penyusunan dokumen teknis','SJPH skala industri','Pendampingan audit LPH']}
+];
+const SVC={
+ sehati:{tab:'SEHATI',title:'Sertifikasi Halal SEHATI (Self-Declare)',
+  intro:'SEHATI adalah program sertifikasi halal gratis dari pemerintah untuk usaha mikro dan kecil dengan produk tidak berisiko. Pelaku usaha menyatakan kehalalan produknya sendiri, lalu diverifikasi oleh Pendamping Proses Produk Halal.',
+  fit:['Usaha mikro atau kecil dan sudah memiliki NIB','Bahan yang dipakai sudah jelas kehalalannya','Proses produksi sederhana dan tidak melibatkan penyembelihan','Tempat dan alat produksi terpisah dari bahan tidak halal'],
+  help:['Cek kelayakan usaha dan produk untuk skema SEHATI','Pembuatan akun dan pengisian data di SIHALAL','Penyusunan daftar bahan dan alur produksi','Pendampingan verifikasi dan validasi','Pemantauan status sampai sertifikat terbit'],
+  note:['Catatan biaya','Program SEHATI tidak dipungut biaya oleh pemerintah. [Jelaskan di sini jasa tambahan Anda, bila ada, misalnya bantuan perbaikan dapur atau penyusunan dokumen, beserta biayanya.]']},
+ reguler:{tab:'Reguler',title:'Sertifikasi Halal Reguler',
+  intro:'Skema reguler diperlukan untuk usaha menengah dan besar, atau produk dengan bahan dan proses yang perlu diperiksa langsung oleh Lembaga Pemeriksa Halal (LPH).',
+  fit:['Produk mengandung daging, turunan hewani, atau bahan kimia','Anda menjalankan RPU, dapur skala besar, restoran, atau pabrik','Usaha Anda tidak memenuhi kriteria SEHATI'],
+  help:['Analisis bahan dan identifikasi titik kritis','Penyusunan Sistem Jaminan Produk Halal (SJPH) dan manual halal','Penetapan dan pelatihan penyelia halal internal','Audit internal sebelum audit LPH','Pendampingan audit LPH dan tindak lanjut temuan','Pemantauan proses sampai ketetapan halal'],
+  note:['Estimasi waktu','Bergantung pada kesiapan dokumen dan jadwal LPH. Kami sampaikan perkiraannya setelah konsultasi awal.']},
+ lanjutan:{tab:'Layanan Lanjutan',title:'Layanan Lanjutan',
+  intro:'Sertifikat terbit bukan akhir pekerjaan. Kami tetap mendampingi saat usaha Anda berkembang atau berubah.',
+  help:['Perpanjangan dan pembaruan data sertifikat','Penambahan produk atau varian baru','Pendampingan saat ganti bahan atau pemasok','Pelatihan penyelia halal internal untuk karyawan','Audit internal berkala untuk menjaga konsistensi','Konsultasi halal untuk pengembangan produk baru']}
+};
+const FAQ=[
+ ['Apakah usaha saya wajib bersertifikat halal?','Produk yang masuk, beredar, dan diperdagangkan di Indonesia wajib bersertifikat halal, dengan penahapan per jenis produk dan skala usaha. Untuk UMK makanan dan minuman, batas penahapannya adalah [tanggal terbaru dari BPJPH]. Konsultasikan produk Anda, kami bantu cek jadwal yang berlaku.'],
+ ['Apa beda skema SEHATI dan reguler?','SEHATI untuk usaha mikro dan kecil dengan produk tidak berisiko, gratis, dan diverifikasi Pendamping PPH. Reguler untuk produk berisiko atau usaha menengah-besar, dengan audit oleh Lembaga Pemeriksa Halal.'],
+ ['Apakah SEHATI benar-benar gratis?','Ya, pemerintah tidak memungut biaya untuk sertifikasi melalui SEHATI. [Jelaskan jasa tambahan Anda, bila ada, secara terpisah.]'],
+ ['Berapa lama prosesnya?','Bergantung pada skema, kesiapan dokumen, dan jadwal pemeriksaan. Setelah konsultasi awal, kami sampaikan perkiraan waktunya.'],
+ ['Berapa biaya jasa pendampingan reguler?','Bergantung pada jumlah produk, kompleksitas bahan, dan skala usaha. Biaya layanan dari BPJPH dan LPH terpisah dari biaya jasa kami. Kami berikan rincian tertulis sebelum mulai.'],
+ ['Apa saja dokumen yang perlu disiapkan?','Minimal NIB, daftar produk, daftar bahan beserta pemasoknya, dan alur produksi. Untuk skema reguler ditambah dokumen SJPH dan penyelia halal. Kami bantu menyusun semuanya.'],
+ ['Apakah pengajuan pasti disetujui?','Keputusan ada pada BPJPH, LPH, dan Komite Fatwa. Tugas kami memastikan usaha dan dokumen Anda siap semaksimal mungkin, dan mendampingi bila ada perbaikan.'],
+ ['Apakah saya harus punya penyelia halal?','Untuk skema reguler, ya. Kami bisa melatih karyawan Anda menjadi penyelia halal internal.'],
+ ['Apakah sertifikat halal perlu diperpanjang?','Sertifikat tetap berlaku selama tidak ada perubahan bahan atau proses produksi. Jika ada perubahan, perlu pembaruan data. [Verifikasi dengan regulasi terbaru sebelum tayang.]'],
+ ['Apakah melayani di luar Bandung?','Ya. Konsultasi dan penyusunan dokumen bisa dilakukan secara daring; kunjungan lokasi disesuaikan kebutuhan. [Sesuaikan dengan cakupan layanan Anda.]']
+];
+const POSTS=[
+ ['SEHATI atau Reguler? Cara Menentukan Skema Sertifikasi Halal untuk Usaha Anda','Panduan Dasar'],
+ ['Syarat Sertifikasi Halal Gratis (SEHATI) dan Cara Mendaftarnya','SEHATI'],
+ ['7 Kesalahan yang Membuat Pengajuan Halal Dikembalikan','Panduan Dasar'],
+ ['Cara Membuat Akun dan Mengajukan di SIHALAL, Langkah demi Langkah','SEHATI'],
+ ['Apa Itu SJPH dan Bagaimana Menyusunnya?','Reguler & SJPH'],
+ ['Peran Penyelia Halal di Perusahaan dan Cara Menjadi Salah Satunya','Reguler & SJPH'],
+ ['Titik Kritis Halal di Rumah Potong Unggas','Panduan per Sektor'],
+ ['Panduan Halal untuk Dapur SPPG: Dari Pemasok sampai Penyajian','Panduan per Sektor'],
+ ['Bumbu, Saus, dan Bahan Impor: Titik Rawan Halal Resto dan Katering','Panduan per Sektor'],
+ ['Mengapa Produk Fashion Perlu Sertifikat Halal?','Panduan per Sektor'],
+ ['Kewajiban Sertifikasi Halal: Jadwal Penahapan yang Perlu Anda Tahu','Regulasi Terbaru'],
+ ['Setelah Sertifikat Terbit: Cara Menjaga Status Halal Usaha Anda','Reguler & SJPH']
+];
+const NAV=[['layanan','Layanan'],['sektor','Sektor'],['portofolio','Portofolio'],['tentang','Tentang'],['faq','FAQ'],['blog','Blog']];
+const TITLES={home:'Pendamping sertifikasi halal',layanan:'Layanan',sektor:'Sektor',portofolio:'Portofolio & Testimoni',tentang:'Tentang',faq:'FAQ',kontak:'Cek Kelayakan & Kontak',blog:'Pusat Edukasi Halal'};
+
+/* ---- views ---- */
+const li=a=>a.map(x=>`<li>${x}</li>`).join('');
+const cta=(h,p,label,link,ext)=>`<div class="cta rv">${pattern()}<h2>${h}</h2><p>${p}</p><a class="btn btn-light" href="${link}" ${ext?'target="_blank" rel="noopener"':''}>${ICON_WA}${label}</a></div>`;
+
+const DOCUMENTATION_PHOTOS=[
+ {file:'20260708_084819.jpg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'20260417_141323.jpg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'20260417_150958.jpg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'IMG-20260927-WA0000.jpg.jpeg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'IMG-20260927-WA0006.jpg.jpeg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'IMG-20260827-WA0031.jpg.jpeg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'IMG-20260827-WA0001.jpg.jpeg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'},
+ {file:'20260127_134653.jpg',alt:'Dokumentasi kegiatan fasilitasi sertifikat halal'}
+];
+
+function documentationGallery(){
+ const base='Dokumentasi%20Fasilitasi%20Sertifikat%20Halal/';
+ const rows=[
+  {direction:'right',photos:DOCUMENTATION_PHOTOS.slice(0,4)},
+  {direction:'left',photos:DOCUMENTATION_PHOTOS.slice(4)}
+ ];
+ const renderGroup=(photos,hidden=false)=>`<div class="doc-group"${hidden?' aria-hidden="true"':''}>${photos.map((photo,index)=>{const src=base+encodeURIComponent(photo.file),number=DOCUMENTATION_PHOTOS.indexOf(photo)+1;return `<button class="doc-card rv" type="button" style="--d:${(index%3)*.08}s" data-photo="${src}" data-caption="${photo.alt}" aria-label="Buka foto dokumentasi ${number}" tabindex="${hidden?'-1':'0'}"><img src="${src}" alt="${photo.alt} ${number}" loading="lazy" decoding="async"></button>`}).join('')}</div>`;
+ return `<section class="sec wrap">
+   <div class="shead rv"><h2>Kegiatan fasilitasi</h2><p class="lead">Foto kegiatan fasilitasi dan kunjungan lapangan bersama pelaku usaha. Foto ditampilkan sebagai dokumentasi, bukan ulasan klien.</p></div>
+  <div class="doc-marquee" aria-label="Galeri foto dokumentasi">
+    ${rows.map(row=>`<div class="doc-row ${row.direction}"><div class="doc-track">${renderGroup(row.photos)}${renderGroup(row.photos,true)}</div></div>`).join('')}
+  </div>
+  <dialog class="photo-viewer" id="photoViewer" aria-label="Foto dokumentasi">
+    <form method="dialog"><button type="submit">Tutup foto</button></form>
+    <img id="photoViewerImage" alt="">
+    <p id="photoViewerCaption"></p>
+  </dialog>
+ </section>`;
+}
+
+function homeV(){
+ return `
+<section class="hero"><div class="wrap hero-grid">
+  <div class="st">
+    <div class="badge" style="--k:0">${ICON_SEAL}Penyelia Halal Bersertifikat BNSP</div>
+    <h1 style="--k:1">Sertifikat halal untuk usaha Anda, didampingi sampai terbit.</h1>
+    <p class="lead" style="--k:2">Dari UMKM rumahan sampai pabrik bahan kimia, kami bantu siapkan dokumen, SJPH, dan proses di SIHALAL, supaya Anda bisa fokus berjualan.</p>
+    <div class="btns" style="--k:3"><a class="btn btn-primary" href="${wa()}" target="_blank" rel="noopener">${ICON_WA}Konsultasi Gratis via WhatsApp</a><a class="btn btn-ghost" href="#/kontak">Cek Skema yang Cocok</a></div>
+  </div>
+  ${motif()}
+</div></section>
+
+<section class="wrap rv"><div class="proof">
+  <div><b>650+</b><span>pelaku UMKM dibantu lewat skema SEHATI</span></div>
+  <div><b>60+</b><span>usaha diproses lewat skema reguler</span></div>
+  <div><b>BNSP</b><span>Tersertifikasi sebagai Penyelia Halal</span></div>
+</div></section>
+
+<section class="sec wrap">
+  <div class="shead rv"><h2>Pilih jalur yang sesuai dengan skala usaha Anda</h2></div>
+  <div class="svc">
+    <a class="panel panel-green rv" href="#/layanan/sehati">${pattern()}<h3>SEHATI untuk UMKM</h3><p>Program sertifikasi halal gratis dari pemerintah untuk usaha mikro dan kecil. Kami bantu cek kelayakan, siapkan data, dan dampingi sampai sertifikat terbit.</p><span class="more ulink">Lihat layanan SEHATI</span></a>
+    <a class="panel rv" style="--d:.1s" href="#/layanan/reguler"><h3>Reguler untuk usaha menengah dan besar</h3><p>Untuk produk dengan bahan atau proses berisiko, seperti daging, bahan kimia, dan dapur skala besar. Kami susun SJPH, siapkan audit LPH, dan kawal perbaikannya.</p><span class="more ulink">Lihat layanan reguler</span></a>
+    <a class="panel rv" style="--d:.2s" href="#/layanan/lanjutan"><h3>Layanan lanjutan</h3><p>Pelatihan penyelia halal internal, pengembangan produk baru, perpanjangan, dan pendampingan saat ada perubahan bahan atau pemasok.</p><span class="more ulink">Lihat layanan lanjutan</span></a>
+  </div>
+</section>
+
+<section class="sec wrap" style="padding-top:0"><div class="why">
+  <div class="why-head rv"><h2>Kenapa halallegalpartner.id</h2></div>
+  <ul>
+    <li class="rv"><h3>Kompeten dan tersertifikasi</h3><p>Didampingi langsung oleh Penyelia Halal bersertifikat BNSP.</p></li>
+    <li class="rv"><h3>Paham banyak sektor</h3><p>RPU, dapur SPPG, resto, katering, fashion, sampai bahan kimia.</p></li>
+    <li class="rv"><h3>Klien kembali lagi</h3><p>Sebagian besar klien kami datang dari rekomendasi, dan banyak yang kembali untuk produk berikutnya.</p></li>
+    <li class="rv"><h3>Jelas dari awal</h3><p>Anda tahu skema yang cocok, dokumen yang diperlukan, dan biaya jasa sebelum mulai.</p></li>
+  </ul>
+</div></section>
+
+<section class="sec wrap" style="padding-top:0">
+  <div class="shead rv"><h2>Empat langkah dari konsultasi sampai sertifikat</h2></div>
+  <ol class="steps" style="list-style:none;margin:0;padding:0">
+    <li class="rv"><span class="n">1</span><h3>Konsultasi</h3><p>Ceritakan usaha dan produk Anda. Kami tentukan skema yang tepat.</p></li>
+    <li class="rv" style="--d:.1s"><span class="n">2</span><h3>Persiapan</h3><p>Kami bantu siapkan data bahan, alur produksi, dan dokumen SJPH.</p></li>
+    <li class="rv" style="--d:.2s"><span class="n">3</span><h3>Pengajuan dan pemeriksaan</h3><p>Pengajuan di SIHALAL, verifikasi pendamping atau audit LPH.</p></li>
+    <li class="rv" style="--d:.3s"><span class="n">4</span><h3>Sertifikat terbit</h3><p>Setelah ketetapan halal, kami bantu Anda menjaga konsistensinya.</p></li>
+  </ol>
+</section>
+
+<section class="sec wrap" style="padding-top:0">
+  <div class="shead rv"><h2>Sektor yang kami layani</h2></div>
+  <div class="rows rv">
+    ${SECTORS.map(s=>`<a class="row" href="#/sektor/${s.slug}"><h3>${s.name}</h3><p>${s.desc}</p><i></i></a>`).join('')}
+    <a class="row" href="#/layanan/sehati"><h3>Kuliner UMKM</h3><p>Jalur SEHATI untuk produk tidak berisiko</p><i></i></a>
+  </div>
+</section>
+
+<section class="sec wrap" style="padding-top:0">
+  <div class="shead rv"><h2>Kata klien kami</h2></div>
+  <div class="tt rv" data-tt>
+    <div class="tt-tabs" role="tablist" aria-label="Testimoni">
+      <button id="review-tab-0" role="tab" aria-controls="review-panel-0" aria-selected="true" data-i="0">Klien RPU</button>
+      <button id="review-tab-1" role="tab" aria-controls="review-panel-1" aria-selected="false" data-i="1">Klien katering</button>
+      <button id="review-tab-2" role="tab" aria-controls="review-panel-2" aria-selected="false" data-i="2">Klien UMKM</button>
+    </div>
+    <div class="tt-stage">
+      <div class="tt-empty on" id="review-panel-0" role="tabpanel" aria-labelledby="review-tab-0" aria-live="polite"><strong>Ulasan klien RPU belum tersedia</strong><p>Belum ada ulasan yang dapat ditampilkan. Kami tidak menampilkan testimoni tanpa data dan persetujuan klien.</p><a class="ulink" href="#/portofolio">Lihat dokumentasi kegiatan</a></div>
+      <div class="tt-empty" id="review-panel-1" role="tabpanel" aria-labelledby="review-tab-1" aria-live="polite"><strong>Ulasan klien katering belum tersedia</strong><p>Belum ada ulasan yang dapat ditampilkan. Foto dokumentasi tersedia tanpa diklaim sebagai ulasan.</p><a class="ulink" href="#/portofolio">Lihat dokumentasi kegiatan</a></div>
+      <div class="tt-empty" id="review-panel-2" role="tabpanel" aria-labelledby="review-tab-2" aria-live="polite"><strong>Ulasan klien UMKM belum tersedia</strong><p>Belum ada ulasan yang dapat ditampilkan. Ulasan akan ditambahkan setelah datanya tersedia dan disetujui.</p><a class="ulink" href="#/portofolio">Lihat dokumentasi kegiatan</a></div>
+    </div>
+  </div>
+</section>
+
+${documentationGallery()}
+
+<section class="wrap" style="padding-bottom:clamp(40px,6vw,80px)">${cta('Siap mengurus sertifikat halal usaha Anda?','Konsultasi awal gratis. Ceritakan usaha Anda, kami bantu tentukan langkah pertamanya.','Chat WhatsApp Sekarang',wa(),true)}</section>`;
+}
+
+function layananV(r){
+ const key=SVC[r.sub]?r.sub:'sehati', s=SVC[key];
+ const tabs=Object.entries(SVC).map(([k,v])=>`<a href="#/layanan/${k}" ${k===key?'aria-current="page"':''}>${v.tab}</a>`).join('');
+ const right=s.fit
+  ? `<div><div class="bl ck"><h3>Cocok untuk Anda jika</h3><ul>${li(s.fit)}</ul></div><div class="bl dash"><h3>Yang kami bantu</h3><ul>${li(s.help)}</ul></div></div>`
+  : `<div class="bl dash"><h3>Yang kami bantu</h3><ul>${li(s.help)}</ul></div>`;
+ return `
+<section class="wrap phead"><h1>Satu pendamping untuk setiap tahap sertifikasi halal</h1>
+<p class="lead">Setiap usaha punya jalur yang berbeda. Kami bantu Anda memilih skema yang tepat, lalu mendampingi sampai sertifikat terbit dan tetap berlaku.</p>
+<div data-anchor><nav class="tabs" aria-label="Jenis layanan">${tabs}</nav></div></section>
+<section class="wrap">
+  <div class="detail">
+    <div><h2>${s.title}</h2><p class="intro">${s.intro}</p>${s.note?`<div class="note"><b>${s.note[0]}</b><p>${s.note[1]}</p></div>`:''}</div>
+    ${right}
+  </div>
+  <div class="strip rv"><h3>Belum yakin skema mana yang cocok? Isi Cek Kelayakan, 2 menit saja.</h3><a class="btn btn-primary" href="#/kontak">Cek Kelayakan</a></div>
+</section>`;
+}
+
+function sektorV(r){
+ const s=SECTORS.find(x=>x.slug===r.sub);
+ if(!s) return `
+<section class="wrap phead"><h1>Setiap sektor punya titik kritis yang berbeda</h1>
+<p class="lead">Pilih sektor Anda untuk melihat masalah yang sering dihadapi dan apa yang kami bantu.</p></section>
+<section class="wrap"><div class="rows rv">${SECTORS.map(x=>`<a class="row" href="#/sektor/${x.slug}"><h3>${x.name}</h3><p>${x.desc}</p><i></i></a>`).join('')}</div></section>`;
+ return `
+<div class="wrap sector" data-anchor>
+  <nav class="side" aria-label="Sektor">${SECTORS.map(x=>`<a href="#/sektor/${x.slug}" ${x.slug===s.slug?'aria-current="page"':''}>${x.short}</a>`).join('')}</nav>
+  <article class="art">
+    <h1>${s.title}</h1>
+    <p class="lead">${s.text}</p>
+    <div class="bl dash"><h3>Yang kami bantu</h3><ul>${li(s.help)}</ul></div>
+    ${s.extra?`<div class="note" style="max-width:640px"><b>${s.extra[0]}</b><p>${s.extra[1]}</p></div>`:''}
+    <div class="strip"><h3>Konsultasikan kebutuhan ${s.short} Anda sekarang.</h3><a class="btn btn-primary" href="${wa(`Halo halallegalpartner.id, saya ingin konsultasi sertifikasi halal untuk usaha ${s.short} saya.`)}" target="_blank" rel="noopener">${ICON_WA}Chat WhatsApp</a></div>
+  </article>
+</div>`;
+}
+
+function portofolioV(){
+ return `
+<section class="wrap phead"><h1>Portofolio dokumentasi</h1>
+<p class="lead">Kumpulan foto kegiatan fasilitasi dan kunjungan lapangan. Foto-foto ini merupakan dokumentasi, bukan ulasan atau klaim hasil klien.</p></section>
+${documentationGallery()}`;
+}
+
+function tentangV(){
+ return `
+<section class="wrap phead"><h1>Di balik halallegalpartner.id</h1></section>
+<section class="wrap"><div class="profile">
+  <p class="lead rv" style="color:var(--ink)">halalinplegalpartner.id didirikan oleh ${SITE.nama}, Penyelia Halal bersertifikat BNSP. Selama bertahun-tahun kami mendampingi pelaku usaha tanpa pernah beriklan. Semua klien datang dari rekomendasi, dan itulah yang ingin kami jaga saat melayani lebih banyak usaha.</p>
+  <dl class="dl rv" style="--d:.1s">
+    <div><dt>Nama</dt><dd>${SITE.nama}</dd></div>
+    <div><dt>Sertifikasi</dt><dd>Penyelia Halal, BNSP ${SITE.bnsp}</dd></div>
+    <div><dt>Latar belakang</dt><dd>Dosen dan praktisi penjaminan mutu</dd></div>
+    <div><dt>Pengalaman</dt><dd>650+ pendampingan SEHATI, 60+ pendampingan reguler</dd></div>
+    <div><dt>Sektor</dt><dd>RPU, dapur SPPG, resto, katering, fashion, bahan kimia</dd></div>
+  </dl>
+</div></section>
+<section class="sec wrap">
+  <div class="shead rv"><h2>Nilai kami</h2></div>
+  <div class="vals">
+    <div class="rv"><h3>Amanah</h3><p>Halal adalah tanggung jawab, bukan sekadar label. Kami tidak mengambil jalan pintas.</p></div>
+    <div class="rv" style="--d:.1s"><h3>Jelas</h3><p>Skema, dokumen, dan biaya jasa disampaikan sejak awal.</p></div>
+    <div class="rv" style="--d:.2s"><h3>Mendampingi</h3><p>Kami tetap ada setelah sertifikat terbit, saat ada produk baru atau perubahan bahan.</p></div>
+  </div>
+</section>
+<section class="wrap" style="padding-bottom:clamp(40px,6vw,80px)"><p class="close rv">Kami percaya setiap usaha, sekecil apa pun, layak mendapat pendampingan halal yang serius.</p></section>`;
+}
+
+function faqV(){
+ return `
+<section class="wrap phead"><h1>Pertanyaan yang sering diajukan</h1>
+<p class="lead">Belum menemukan jawabannya? Tanyakan langsung lewat WhatsApp.</p></section>
+<section class="wrap">
+  <div class="faq">
+    ${FAQ.map((f,i)=>`<div class="acc"><h3 style="font:inherit;letter-spacing:inherit"><button aria-expanded="false" aria-controls="a${i}" id="q${i}" data-acc>${f[0]}<span class="pm"></span></button></h3><div class="acc-p" id="a${i}" role="region" aria-labelledby="q${i}"><div><p>${f[1]}</p></div></div></div>`).join('')}
+  </div>
+  <div class="btns" style="margin-top:40px"><a class="btn btn-primary" href="${wa()}" target="_blank" rel="noopener">${ICON_WA}Tanya via WhatsApp</a><a class="btn btn-ghost" href="#/kontak">Cek Kelayakan</a></div>
+</section>`;
+}
+
+function blogV(){
+ const cats=['Panduan Dasar','SEHATI','Reguler & SJPH','Panduan per Sektor','Regulasi Terbaru'];
+ return `
+<section class="wrap phead"><h1>Pusat Edukasi Halal</h1>
+<p class="lead">Panduan praktis seputar sertifikasi halal, ditulis dari pengalaman mendampingi ratusan usaha.</p></section>
+<section class="wrap">
+  <div class="chips" data-fgroup data-target="#posts" role="group" aria-label="Filter kategori">
+    <button class="chip" data-filter="all" aria-pressed="true">Semua</button>
+    ${cats.map(c=>`<button class="chip" data-filter="${c}" aria-pressed="false">${c}</button>`).join('')}
+  </div>
+  <div class="posts" id="posts">
+    ${POSTS.map(p=>`<article class="post" data-c="${p[1]}"><span>${p[1]}</span><h3>${p[0]}</h3><em>Segera terbit</em></article>`).join('')}
+  </div>
+</section>`;
+}
+
+function kontakV(){
+ const chip=(name,opts)=>opts.map((o,i)=>`<div class="opt"><input type="radio" name="${name}" id="${name}${i}" value="${o}"><label for="${name}${i}">${o}</label></div>`).join('');
+ const mailto=/^\[/.test(SITE.email)?SITE.email:`<a class="ulink" href="mailto:${SITE.email}">${SITE.email}</a>`;
+ return `
+<section class="wrap phead"><h1>Cek skema yang cocok untuk usaha Anda</h1>
+<p class="lead">Jawab 6 pertanyaan singkat. Kami akan menghubungi Anda lewat WhatsApp dengan rekomendasi skema dan langkah awal.</p></section>
+<section class="wrap"><div class="contact">
+  <div>
+    <form class="form" id="cek" novalidate>
+      <fieldset class="q" data-need="nama,usaha"><legend><i>1</i>Nama dan nama usaha</legend>
+        <div class="fields"><input class="fld" name="nama" autocomplete="name" placeholder="Nama Anda" aria-label="Nama Anda"><input class="fld" name="usaha" autocomplete="organization" placeholder="Nama usaha" aria-label="Nama usaha"></div><div class="err" role="alert">Isi nama dan nama usaha Anda.</div></fieldset>
+      <fieldset class="q" data-need="jenis"><legend><i>2</i>Jenis usaha</legend>
+        <div class="chips">${chip('jenis',['Kuliner UMKM','Resto/Katering','Dapur SPPG','RPU','Fashion','Bahan kimia','Lainnya'])}</div><div class="err" role="alert">Pilih jenis usaha Anda.</div></fieldset>
+      <fieldset class="q" data-need="skala"><legend><i>3</i>Skala usaha</legend>
+        <div class="chips">${chip('skala',['Mikro','Kecil','Menengah','Besar'])}</div><div class="err" role="alert">Pilih skala usaha Anda.</div></fieldset>
+      <fieldset class="q" data-need="nib"><legend><i>4</i>Apakah sudah punya NIB?</legend>
+        <div class="chips">${chip('nib',['Sudah','Belum','Sedang diurus'])}</div><div class="err" role="alert">Pilih salah satu jawaban.</div></fieldset>
+      <fieldset class="q" data-need="hewani"><legend><i>5</i>Apakah produk mengandung daging atau turunan hewani?</legend>
+        <div class="chips">${chip('hewani',['Ya','Tidak','Tidak yakin'])}</div><div class="err" role="alert">Pilih salah satu jawaban.</div></fieldset>
+      <fieldset class="q" data-need="wa,kota"><legend><i>6</i>Nomor WhatsApp dan kota</legend>
+        <div class="fields"><input class="fld" name="wa" type="tel" inputmode="tel" autocomplete="tel" placeholder="Nomor WhatsApp" aria-label="Nomor WhatsApp"><input class="fld" name="kota" autocomplete="address-level2" placeholder="Kota" aria-label="Kota"></div><div class="err" role="alert">Isi nomor WhatsApp dan kota Anda.</div></fieldset>
+      <div><button class="btn btn-primary" type="submit">Kirim dan Dapatkan Rekomendasi</button></div>
+    </form>
+    <div class="done" id="done" tabindex="-1" aria-live="polite">
+      <h2>Terima kasih.</h2>
+      <p class="lead">Satu langkah lagi: kirim jawaban Anda lewat WhatsApp agar kami bisa menghubungi Anda dalam ${SITE.respon}.</p>
+      <pre id="sum"></pre>
+      <div class="btns"><a class="btn btn-primary" id="sendWa" href="#" target="_blank" rel="noopener">${ICON_WA}Kirim lewat WhatsApp</a><button class="btn btn-ghost" type="button" id="again">Isi ulang</button></div>
+    </div>
+  </div>
+  <div class="info-w rv"><dl class="info">
+    <div><dt>WhatsApp</dt><dd>${waShow()}</dd></div>
+    <div><dt>Email</dt><dd>${mailto}</dd></div>
+    <div><dt>Alamat</dt><dd>${SITE.alamat}</dd></div>
+    <div><dt>Jam layanan</dt><dd>${SITE.jam}</dd></div>
+  </dl>
+  <div class="btns" style="margin-top:24px"><a class="btn btn-ghost" href="${wa()}" target="_blank" rel="noopener">${ICON_WA}Chat langsung</a></div></div>
+</div></section>`;
+}
+
+function notFoundV(){return `<section class="wrap phead"><h1>Halaman tidak ditemukan</h1><p class="lead">Alamat yang Anda buka tidak ada atau sudah dipindahkan.</p><div><a class="btn btn-primary" href="#/">Kembali ke beranda</a></div></section>`}
+
+const VIEWS={home:homeV,layanan:layananV,sektor:sektorV,portofolio:portofolioV,tentang:tentangV,faq:faqV,kontak:kontakV,blog:blogV};
+
+/* ---- chrome ---- */
+function buildChrome(){
+ $('#brandMark').innerHTML=mark();
+ $('#curtain').innerHTML=mark();
+ $('#nav').innerHTML=NAV.map(n=>`<a href="#/${n[0]}" data-p="${n[0]}">${n[1]}</a>`).join('');
+ $('#menuNav').innerHTML=[['','Beranda'],...NAV,['kontak','Cek Kelayakan & Kontak']].map((n,i)=>`<a href="#/${n[0]}" style="--n:${i}">${n[1]}</a>`).join('');
+ $('#menuBtns').innerHTML=`<a class="btn btn-primary" href="${wa()}" target="_blank" rel="noopener" style="width:100%">${ICON_WA}Konsultasi Gratis via WhatsApp</a>`;
+ const soc=Object.entries(SITE.social).map(([k,u])=>u?`<li><a class="ulink" href="${u}" target="_blank" rel="noopener">${k}</a></li>`:`<li>${k}</li>`).join('');
+ const mail=/^\[/.test(SITE.email)?SITE.email:`<a class="ulink" href="mailto:${SITE.email}">${SITE.email}</a>`;
+ $('#ftr').innerHTML=`<div class="wrap"><div class="ftr-grid">
+  <div><a class="brand" href="#/">${mark()}</a><p class="tag">Pendamping sertifikasi halal, dari UMKM sampai industri.</p></div>
+  <div><h4>Menu</h4><ul>${NAV.map(n=>`<li><a href="#/${n[0]}">${n[1]}</a></li>`).join('')}</ul></div>
+  <div><h4>Kontak</h4><ul><li>${waShow()}</li><li>${mail}</li><li>${SITE.alamat}</li></ul></div>
+  <div><h4>Media sosial</h4><ul>${soc}</ul></div>
+ </div>
+ <div class="disc"><p>halallegalpartner.id adalah layanan konsultasi dan pendampingan sertifikasi halal yang independen, bukan bagian dari BPJPH, LPH, maupun MUI. Keputusan penetapan kehalalan dan penerbitan sertifikat sepenuhnya merupakan kewenangan lembaga terkait. Program SEHATI dari pemerintah tidak dipungut biaya.</p><p>© 2026 halallegalpartner.id. Seluruh hak dilindungi.</p></div></div>`;
+ const f=$('#waFloat'); f.href=wa(); f.innerHTML=ICON_WA+'<span>Tanya soal sertifikasi halal</span>';
+ wrapPh($('#ftr')); wrapPh($('#menuBtns'));
+}
+function wrapPh(root){
+ const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];
+ while(w.nextNode()){const n=w.currentNode;if(/\[[^\]]+\]/.test(n.nodeValue)&&!/^(SCRIPT|STYLE|TEXTAREA)$/.test(n.parentNode.tagName)&&!n.parentNode.classList.contains('ph'))nodes.push(n)}
+ nodes.forEach(n=>{const fr=document.createDocumentFragment();
+  n.nodeValue.split(/(\[[^\]]+\])/).forEach(p=>{if(/^\[[^\]]+\]$/.test(p)){const s=document.createElement('span');s.className='ph';s.textContent=p;fr.appendChild(s)}else if(p)fr.appendChild(document.createTextNode(p))});
+  n.parentNode.replaceChild(fr,n)});
+}
+
+/* ---- router ---- */
+const view=$('#view'),cur=$('#curtain');
+let current=null,token=0,io=null;
+const parse=()=>{const p=location.hash.replace(/^#\/?/,'').split('/').filter(Boolean);return{page:p[0]||'home',sub:p[1]||null}};
+
+function render(r,soft){
+ const f=VIEWS[r.page]||notFoundV;
+ view.innerHTML=f(r); wrapPh(view);
+ view.classList.remove('enter'); void view.offsetWidth; if(!soft)view.classList.add('enter');
+ current=r;
+ document.title=(TITLES[r.page]?TITLES[r.page]+' | ':'')+'halallegalpartner.id'+(r.page==='home'?'':'');
+ $$('#nav a').forEach(a=>a.toggleAttribute('aria-current',a.dataset.p===r.page)); $$('#nav a').forEach(a=>{if(a.dataset.p===r.page)a.setAttribute('aria-current','page')});
+ observe();
+}
+function observe(){
+ if(io)io.disconnect();
+ const els=$$('.rv',view);
+ if(reduce||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+ io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px',threshold:.06});
+ els.forEach(e=>io.observe(e));
+}
+async function navigate(first){
+ const t=++token,r=parse();
+ closeMenu();
+ if(first||!current||reduce){render(r);if(!first)window.scrollTo(0,0);return}
+ const soft=current.page===r.page&&(r.page==='layanan'||r.page==='sektor');
+ if(soft){
+  view.classList.add('swap');await sleep(230);if(t!==token)return;
+  render(r,true);
+  const a=$('[data-anchor]',view);if(a){const y=a.getBoundingClientRect().top+scrollY-96;if(scrollY>y)window.scrollTo(0,Math.max(0,y))}
+  view.classList.remove('swap');return;
+ }
+ cur.classList.remove('leave','reset');cur.classList.add('cover');
+ await sleep(580);if(t!==token)return;
+ render(r);window.scrollTo(0,0);$('#main').focus({preventScroll:true});
+ cur.classList.remove('cover');cur.classList.add('leave');
+ await sleep(650);if(t!==token)return;
+ cur.classList.add('reset');cur.classList.remove('leave');void cur.offsetWidth;cur.classList.remove('reset');
+}
+addEventListener('hashchange',()=>navigate(false));
+
+/* ---- menu ---- */
+function closeMenu(){document.body.classList.remove('menu-open');const b=$('#burger');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Buka menu')}
+$('#burger').addEventListener('click',()=>{const o=document.body.classList.toggle('menu-open');const b=$('#burger');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Tutup menu':'Buka menu')});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+$('#menu').addEventListener('click',e=>{if(e.target.closest('a[href^="#"]'))closeMenu()});
+addEventListener('click',e=>{const a=e.target.closest('a[href^="#/"]');if(a&&a.getAttribute('href')===location.hash)window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})});
+
+/* ---- scroll state ---- */
+function onScroll(){const y=scrollY;$('#hdr').classList.toggle('scrolled',y>8);$('#waFloat').classList.toggle('show',y>280)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ---- interactions (delegated) ---- */
+document.addEventListener('click',e=>{
+ // documentation photo viewer
+ const photo=e.target.closest('[data-photo]');
+ if(photo){const dialog=$('#photoViewer');if(!dialog)return;const image=$('#photoViewerImage'),caption=$('#photoViewerCaption');image.src=photo.dataset.photo;image.alt=photo.querySelector('img')?.alt||'Foto dokumentasi';caption.textContent=photo.dataset.caption||'';dialog.showModal();return}
+ // accordion
+ const ac=e.target.closest('[data-acc]');
+ if(ac){const item=ac.closest('.acc'),open=!item.classList.contains('open');
+  $$('.acc.open').forEach(x=>{x.classList.remove('open');$('[data-acc]',x).setAttribute('aria-expanded','false')});
+  if(open){item.classList.add('open');ac.setAttribute('aria-expanded','true')}return}
+ // filters
+ const fb=e.target.closest('[data-filter]');
+ if(fb){const g=fb.closest('[data-fgroup]'),v=fb.dataset.filter;
+  $$('[data-filter]',g).forEach(x=>x.setAttribute('aria-pressed',x===fb));
+  $$('[data-c]',$(g.dataset.target)).forEach(it=>{
+   const show=v==='all'||it.dataset.c===v;clearTimeout(it._t);
+   if(show){it.hidden=false;void it.offsetWidth;it.classList.remove('out')}
+   else{it.classList.add('out');it._t=setTimeout(()=>{it.hidden=true},reduce?0:290)}
+  });return}
+ // testimonials
+ const tb=e.target.closest('[data-tt] [data-i]');
+ if(tb){const w=tb.closest('[data-tt]'),i=+tb.dataset.i;
+  $$('[data-i]',w).forEach(x=>x.setAttribute('aria-selected',x===tb));
+  $$('.tt-stage > *',w).forEach((panel,k)=>panel.classList.toggle('on',k===i));return}
+ // reset form
+ if(e.target.closest('#again')){$('#done').classList.remove('on');const f=$('#cek');f.reset();f.style.display='';$$('.q',f).forEach(q=>q.classList.remove('bad'))}
+});
+document.addEventListener('submit',e=>{
+ if(e.target.id!=='cek')return;e.preventDefault();
+ const f=e.target,d=Object.fromEntries(new FormData(f).entries());
+ let ok=true,first=null;
+ $$('.q',f).forEach(q=>{
+  const bad=q.dataset.need.split(',').some(n=>!(d[n]||'').trim());
+  q.classList.toggle('bad',bad);if(bad){ok=false;first=first||q}
+ });
+ if(!ok){first.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});const i=$('input',first);if(i&&i.type!=='radio')i.focus({preventScroll:true});return}
+ const msg=`Halo halallegalpartner.id, saya ingin cek kelayakan sertifikasi halal.\nNama: ${d.nama}\nUsaha: ${d.usaha}\nJenis usaha: ${d.jenis}\nSkala: ${d.skala}\nNIB: ${d.nib}\nProduk mengandung daging/turunan hewani: ${d.hewani}\nWhatsApp: ${d.wa}\nKota: ${d.kota}`;
+ $('#sum').textContent=msg;$('#sendWa').href=wa(msg);
+ f.style.display='none';const done=$('#done');done.classList.add('on');wrapPh(done);
+ done.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});done.focus({preventScroll:true});
+});
+document.addEventListener('input',e=>{const q=e.target.closest('.q.bad');if(q)q.classList.remove('bad')});
+
+buildChrome();
+navigate(true);
+</script>
+</body>
+</html>
