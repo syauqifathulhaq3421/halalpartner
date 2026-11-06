@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>halallegalpartner.id | Pendamping sertifikasi halal</title>
 <meta name="description" content="Pendampingan sertifikasi halal dari UMKM sampai industri: SEHATI, reguler, SJPH, dan proses di SIHALAL.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -231,7 +232,7 @@ body.menu-open .menu nav a{opacity:1;transform:none;transition-delay:calc(var(--
 .ftr{border-top:1px solid var(--line);margin-top:clamp(40px,6vw,80px);padding-block:clamp(40px,6vw,72px) 32px}
 .ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:32px}
 .ftr h4{font:600 .95rem var(--sans);margin:0 0 14px}
-.ftr li{margin-bottom:8px;color:var(--muted)}
+.ftr li{margin-bottom:8px;color:var(--muted);overflow-wrap:anywhere}
 .ftr li a{transition:color .3s}
 .ftr li a:hover{color:var(--ink)}
 .ftr .tag{font:600 1.2rem/1.35 var(--serif);letter-spacing:-.02em;max-width:24ch;margin-top:14px}
@@ -380,9 +381,37 @@ body.menu-open .menu nav a{opacity:1;transform:none;transition-delay:calc(var(--
 .info{display:grid;gap:0;border-top:1px solid var(--line)}
 .info>div{padding:18px 0;border-bottom:1px solid var(--line)}
 .info dt{color:var(--muted);font-size:.92rem;margin-bottom:2px}
-.info dd{margin:0}
+.info dd{margin:0;overflow-wrap:anywhere}
 .info-w{position:sticky;top:100px}
 @media(max-width:860px){.contact{grid-template-columns:1fr}.info-w{position:static}}
+
+@media(max-width:600px){
+  :root{--gut:16px}
+  .hero{padding-block:28px 36px}
+  .badge{margin-bottom:20px}
+  .hero h1{margin-bottom:20px}
+  .hero .lead{margin-bottom:24px}
+  .motif{max-width:260px}
+  .sec{padding-block:48px}
+  .phead{grid-template-columns:minmax(0,1fr);padding-block:32px 24px;gap:16px}
+  .phead>*{min-width:0}
+  .contact{grid-template-columns:minmax(0,1fr)}
+  .contact>*,
+  .form,
+  .fields,
+  .fld{min-width:0}
+  .shead{gap:12px;margin-bottom:24px}
+  .proof>div{padding-block:18px}
+  .svc{gap:12px}
+  .panel{padding:20px;gap:12px}
+  .panel-green{min-height:0}
+  .why li{padding-block:20px}
+  .steps li{min-height:0;padding-bottom:24px}
+  .row{padding-block:20px}
+  .tt-empty{min-height:150px}
+  .strip{margin-top:40px;padding:20px}
+  .cta{gap:20px;padding:28px;border-radius:22px}
+}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
@@ -526,8 +555,8 @@ const POSTS=[
  ['Kewajiban Sertifikasi Halal: Jadwal Penahapan yang Perlu Anda Tahu','Regulasi Terbaru'],
  ['Setelah Sertifikat Terbit: Cara Menjaga Status Halal Usaha Anda','Reguler & SJPH']
 ];
-const NAV=[['layanan','Layanan'],['sektor','Sektor'],['portofolio','Portofolio'],['tentang','Tentang'],['faq','FAQ'],['blog','Blog']];
-const TITLES={home:'Pendamping sertifikasi halal',layanan:'Layanan',sektor:'Sektor',portofolio:'Portofolio & Testimoni',tentang:'Tentang',faq:'FAQ',kontak:'Cek Kelayakan & Kontak',blog:'Pusat Edukasi Halal'};
+const NAV=[['layanan','Layanan'],['sektor','Sektor'],['portofolio','Portofolio'],['tentang','Tentang'],['blog','Blog']];
+const TITLES={home:'Pendamping sertifikasi halal',layanan:'Layanan',sektor:'Sektor',portofolio:'Portofolio & Testimoni',tentang:'Tentang',kontak:'Cek Kelayakan & Kontak',blog:'Pusat Edukasi Halal'};
 
 /* ---- views ---- */
 const li=a=>a.map(x=>`<li>${x}</li>`).join('');
@@ -652,7 +681,7 @@ function layananV(r){
 <div data-anchor><nav class="tabs" aria-label="Jenis layanan">${tabs}</nav></div></section>
 <section class="wrap">
   <div class="detail">
-    <div><h2>${s.title}</h2><p class="intro">${s.intro}</p>${s.note?`<div class="note"><b>${s.note[0]}</b><p>${s.note[1]}</p></div>`:''}</div>
+    <div><h2>${s.title}</h2><p class="intro">${s.intro}</p>${s.note&&key!=='sehati'?`<div class="note"><b>${s.note[0]}</b><p>${s.note[1]}</p></div>`:''}</div>
     ${right}
   </div>
   <div class="strip rv"><h3>Belum yakin skema mana yang cocok? Isi Cek Kelayakan, 2 menit saja.</h3><a class="btn btn-primary" href="#/kontak">Cek Kelayakan</a></div>
@@ -779,7 +808,7 @@ function kontakV(){
 
 function notFoundV(){return `<section class="wrap phead"><h1>Halaman tidak ditemukan</h1><p class="lead">Alamat yang Anda buka tidak ada atau sudah dipindahkan.</p><div><a class="btn btn-primary" href="#/">Kembali ke beranda</a></div></section>`}
 
-const VIEWS={home:homeV,layanan:layananV,sektor:sektorV,portofolio:portofolioV,tentang:tentangV,faq:faqV,kontak:kontakV,blog:blogV};
+const VIEWS={home:homeV,layanan:layananV,sektor:sektorV,portofolio:portofolioV,tentang:tentangV,kontak:kontakV,blog:blogV};
 
 /* ---- chrome ---- */
 function buildChrome(){
